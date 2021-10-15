@@ -3,11 +3,11 @@
 */
 
 /**
- * ETHX is a deflationary currency, designed to reward holders, pump price and discourage bots.
+ * ESP is a Governance token, designed for pool game players, pump price and discourage bots.
  * It will allow holders to access unique Ethereum farming opportunities,
  * and collect a percentage of the farming platform fees.
  *
- * The ETHX Token itself is just a standard BEP20, with:
+ * The ESP Token itself is just a standard BEP20, with:
  * No minting.
  * Public burning.
  * Transfer fee applied.
@@ -372,10 +372,10 @@ contract DeflationaryERC20 is Context, IERC20, Ownable {
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
 }
  
-contract ETHX is DeflationaryERC20 {
+contract ESP is DeflationaryERC20 {
 
-    constructor() public DeflationaryERC20("EthereumX", "ETHX") {
-        _mint(msg.sender, 500000e18);
+    constructor() public DeflationaryERC20("ESKILLZ Pool", "ESP") {
+        _mint(msg.sender, 100000000e18);
     }
 
     function burn(uint256 amount) public {
