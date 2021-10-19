@@ -874,7 +874,7 @@ contract DeflationaryERC20 is Context, IERC20, Ownable {
 pragma solidity 0.6.6;
 
 /**
- * ESP is an exchange, staking, farming utility, and governance token.
+ * ESP is an staking, farming utility, and governance token.
  * It will allow holders to access unique DeFi opportunities and collect 
  * a percentage of the transaction fees.
  *
