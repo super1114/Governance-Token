@@ -84,6 +84,25 @@ module.exports = {
       gasPrice: 10000000000,
       networkCheckTimeout: 300000
     },
+    matic: {
+      provider: () => new HDWalletProvider(process.env.MNENOMIC, `https://rpc-mumbai.maticvigil.com`),
+      network_id: 80001,
+      confirmations: 2,
+      gas: 3000000,
+      gasPrice: 10000000000,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    matic1: {
+      provider: () => new HDWalletProvider(process.env.MNENOMIC, 
+      `https://rpc-mumbai.matic.today`),
+      network_id: 80001,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      gas: 6000000,
+      gasPrice: 10000000000,
+    },
     // ropsten: {
     //   provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/YOUR-PROJECT-ID`),
     //   network_id: 3,       // Ropsten's id
@@ -119,4 +138,10 @@ module.exports = {
       }
     },
   },
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    etherscan: process.env.ETHERSCAN_API_KEY
+  }
 };

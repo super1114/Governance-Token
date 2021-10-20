@@ -538,7 +538,7 @@ contract DeflationaryERC20 is Context, IERC20, Ownable {
     uint8 private _decimals;
 
     // Transaction Fees:
-    uint8 public txFee = 50; // capped to 10%.
+    uint8 public txFee = 0; // capped to 10%.
     address public feeDistributor; // fees are sent to fee distributer
 
     // Fee Whitelist
@@ -874,7 +874,7 @@ contract DeflationaryERC20 is Context, IERC20, Ownable {
 pragma solidity 0.6.6;
 
 /**
- * ESP is an exchange, staking, farming utility, and governance token.
+ * ESP is an staking, farming utility, and governance token.
  * It will allow holders to access unique DeFi opportunities and collect 
  * a percentage of the transaction fees.
  *
