@@ -3,6 +3,7 @@ require("@nomiclabs/hardhat-waffle");
 // The next line is part of the sample project, you don't need it in your
 // project. It imports a Hardhat task definition, that can be used for
 // testing the frontend.
+require('dotenv').config() 
 require('@nomiclabs/hardhat-ethers');
 require("@nomiclabs/hardhat-etherscan");
 // const fs = require("fs");
