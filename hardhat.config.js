@@ -13,10 +13,10 @@ module.exports = {
   networks: {
     matic: {
       url: "https://rpc-mumbai.maticvigil.com",
-      accounts : ["5d46fd3480ababb4ebcaefd908bb6ae7454cb12e792f212691ffc3e3b79464db"]
+      accounts : [process.env.PRIVKEY]
     }
   },
   etherscan: {
-    apiKey: "HB2NKKCSQ6S8VGC5FJMXKHB4X4DKTFSYSF"
+    apiKey: process.env.POLYGONSCAN_API_KEY
   }
 };
