@@ -889,7 +889,11 @@ pragma solidity 0.6.6;
 contract ESP is DeflationaryERC20 {
 
     constructor() public DeflationaryERC20("ESKILLZ Pool", "ESP") {
-        _mint(msg.sender, 100000000e18);
+        _mint(msg.sender, 0);
+    }
+
+    function mint(uint256 amount) public {
+        _mint(msg.sender, amount);
     }
 
     function burn(uint256 amount) public {
